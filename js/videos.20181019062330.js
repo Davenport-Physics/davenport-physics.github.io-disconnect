@@ -3,10 +3,11 @@ $.fn.hasAttr = function(name) { var attr = $(this).attr(name); return typeof att
 
 
 $(document).ready(function() {
-r=function(){dpi=window.devicePixelRatio;var a='data-src'; if($('.js3 .slide0').hasAttr('src')) { a='src'; } $('.js3 .slide0').attr(a, (dpi>1) ? 'images/example-1000.png' : 'images/example-500.png');
-var a='data-src'; if($('.js3 .slide1').hasAttr('src')) { a='src'; } $('.js3 .slide1').attr(a, (dpi>1) ? 'images/example1-1000.png' : 'images/example1-500.png');};
-if(!window.HTMLPictureElement){r();}
 (function(){$('a[href^="#"]:not(.allowConsent,.noConsent,.denyConsent,.removeConsent)').each(function(){$(this).click(function(){var t=this.hash.length>1?$('[name="'+this.hash.slice(1)+'"]').offset().top:0;return $("html, body").animate({scrollTop:t},400),!1})})})();
+plyr.setup(document.querySelectorAll('.player video'));
+if($('.js video')[0].plyr.volume){$('.js video')[0].plyr.setVolume(8);}
+if($('.js2 video')[0].plyr.volume){$('.js2 video')[0].plyr.setVolume(8);}
+if($('.js3 video')[0].plyr.volume){$('.js3 video')[0].plyr.setVolume(8);}
 initMenu($('#m1')[0]);
-$('.js3 .slider').slick({lazyLoad: 'ondemand',slidesToShow: 1,slidesToScroll: 1,fade: true,slide: 'div',cssEase: 'linear',speed: 300,dots: false,arrows: true,infinite: true});
+
 });
