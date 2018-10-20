@@ -4,10 +4,6 @@ $.fn.hasAttr = function(name) { var attr = $(this).attr(name); return typeof att
 
 $(document).ready(function() {
 (function(){$('a[href^="#"]:not(.allowConsent,.noConsent,.denyConsent,.removeConsent)').each(function(){$(this).click(function(){var t=this.hash.length>1?$('[name="'+this.hash.slice(1)+'"]').offset().top:0;return $("html, body").animate({scrollTop:t},400),!1})})})();
-plyr.setup(document.querySelectorAll('.player video'));
-if($('.js video')[0].plyr.volume){$('.js video')[0].plyr.setVolume(8);}
-if($('.js2 video')[0].plyr.volume){$('.js2 video')[0].plyr.setVolume(8);}
-if($('.js3 video')[0].plyr.volume){$('.js3 video')[0].plyr.setVolume(8);}
 initMenu($('#m1')[0]);
 
 });
