@@ -3,7 +3,7 @@ $.fn.hasAttr = function(name) { var attr = $(this).attr(name); return typeof att
 
 
 $(document).ready(function() {
-r=function(){dpi=window.devicePixelRatio;$('.js3').attr('src', (dpi>1) ? 'images/startmenutext-600.png' : 'images/startmenutext-300.png');
+r=function(){dpi=window.devicePixelRatio;$('.js3').attr('src', (dpi>1) ? 'images/startmenutext-480.png' : 'images/startmenutext-240.png');
 var a='data-src'; if($('.js4 .slide0').hasAttr('src')) { a='src'; } $('.js4 .slide0').attr(a, (dpi>1) ? 'images/screen-shot-2018-11-17-at-12.22.54-pm-722.png' : 'images/screen-shot-2018-11-17-at-12.22.54-pm-361.png');
 var a='data-src'; if($('.js4 .slide1').hasAttr('src')) { a='src'; } $('.js4 .slide1').attr(a, (dpi>1) ? 'images/screen-shot-2018-11-17-at-12.23.22-pm-722.png' : 'images/screen-shot-2018-11-17-at-12.23.22-pm-361.png');};
 if(!window.HTMLPictureElement){r();}
